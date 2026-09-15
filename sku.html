@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css" />
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Project</title>
+
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background-color: rgb(255, 249, 241);
+        }
+       .box {
+      border: 1px solid #000000;
+      padding: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
+      box-sizing: border-box;
+      color: rgb(179, 60, 60);
+      background-color: antiquewhite;
+      margin: 30px;
+      margin-left: 200px;
+      margin-right: 200px;
+      margin-top: 150px;
+    }
+    </style>
+</head>
+<body>
+     <!-- navbar -->
+    <nav class="navbar navbar-expand-sm border border-dark" style="background-color: rgb(179, 60, 60);">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="mynavbar">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-items"><a href="index.html" class="nav-link">Receipt Generator</a></li>
+                    <li class="nav-items"><a href="sku.html" class="nav-link">Sku Generator</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="box align-items-center" role="region" aria-label="Text box" style="text-align:center;">
+    <h1><i><b>SKU Generator</b></i></h1><br>
+    <form>
+        <label for="select">Category</label><br>
+        <select class="custom-select" id="select">
+            <option id="pizza">Pizza</option>
+            <option id="chicken">Chicken</option>
+            <option id="beverages">Beverages</option>
+            <option id="sides">Sides</option>
+        </select><br><br>
+        <label for="text1">Product Name</label><br>
+        <input type="text" id="text1" placeholder="e.g. Classic Cheese Pizza"><br><br>
+        <label for="number1">Stock Quantity</label><br>
+        <input type="number" id="number1" placeholder="e.g. 10"><br><br>
+        <input type="button" py-click="sku_generator" value="Generate SKU">
+    </form>
+    <div id="result" style="color: rgb(179, 60, 60); font-size: 35px;"></div>
+    <py-script src="main.py"></py-script></div>
+</body>
+</html>
